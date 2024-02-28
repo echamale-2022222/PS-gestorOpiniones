@@ -6,6 +6,7 @@ import morgan from 'morgan';
 import { dbConnection } from './mongo.js';
 import authRoutes from '../src/auth/auth.routes.js';
 import userRoutes from '../src/user/user.routes.js';
+import publicationRoutes from '../src/publication/publication.routes.js';
 
 class Server{
     constructor(){
@@ -13,6 +14,7 @@ class Server{
         this.port = process.env.PORT;
         this.authPath = '/tabby/v1/auth';
         this.userPath = '/tabby/v1/user';
+        this.publicationPath = '/tabby/v1/publication';
 
         this.middlewares();
         this.connectDB();
@@ -34,6 +36,7 @@ class Server{
     routes(){
         this.app.use(this.authPath, authRoutes);
         this.app.use(this.userPath, userRoutes);
+        this.app.use(this.publicationPath, publicationRoutes);
     }
 
     listen(){
