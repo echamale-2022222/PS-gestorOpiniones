@@ -42,4 +42,6 @@ router.delete(
         validateFields,
     ], deleteMyPost);
 
+    //"/:idPublicacion/:idComentario",
+
 export default router;
