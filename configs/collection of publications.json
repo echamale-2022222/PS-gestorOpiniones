@@ -1,0 +1,114 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "collection of publications",
+    "dateExported": "2024-02-28T17:17:06.395Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "8c55682e-dae0-4628-9ef4-22cbea5c22b0",
+            "colId": "74d19e22-d51e-4539-ba35-a5969456083a",
+            "containerId": "",
+            "name": "post addPublication",
+            "url": "http://localhost:3000/tabby/v1/publication",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-02-28T15:01:55.628Z",
+            "modified": "2024-02-28T16:48:49.386Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWRmNWM5ZDVmZDhhMDZmYzFhODVlOWQiLCJpYXQiOjE3MDkxMzg4MTAsImV4cCI6MTcwOTE0MjQxMH0.tECQst7cXymBWSodoayzyuzO9q6NjQ0bXEKHNSOb1Mg"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\": \"Los peces\",\n  \"category\": \"Animales acuaticos\",\n  \"maintext\": \"Los peces se comen\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "ec90820e-ce80-430b-999b-c0f1ddfac237",
+            "colId": "74d19e22-d51e-4539-ba35-a5969456083a",
+            "containerId": "",
+            "name": "get publications",
+            "url": "http://localhost:3000/tabby/v1/publication",
+            "method": "GET",
+            "sortNum": 15000,
+            "created": "2024-02-28T16:44:55.805Z",
+            "modified": "2024-02-28T16:45:07.353Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "c687fdd9-c02c-4d01-b877-dc2ddb62eb26",
+            "colId": "74d19e22-d51e-4539-ba35-a5969456083a",
+            "containerId": "",
+            "name": "put addComments",
+            "url": "http://localhost:3000/tabby/v1/publication/65df584da2cb987ef6a95969",
+            "method": "PUT",
+            "sortNum": 20000,
+            "created": "2024-02-28T16:14:48.953Z",
+            "modified": "2024-02-28T16:18:16.614Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWRmNWM5ZDVmZDhhMDZmYzFhODVlOWQiLCJpYXQiOjE3MDkxMzcwNTksImV4cCI6MTcwOTE0MDY1OX0.OAjqKHavejnyTHdqumla5bPVn5AKzQ_DlwF58DmfbHA"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"content\": \"Puede que sea cierto o no, no lo sabemos a ciencia cierta\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "16e5e4b1-a884-46d8-98b8-6101ff31b2d6",
+            "colId": "74d19e22-d51e-4539-ba35-a5969456083a",
+            "containerId": "",
+            "name": "put updateMyPost",
+            "url": "http://localhost:3000/tabby/v1/publication/updateMyPost/65df584da2cb987ef6a95969",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2024-02-28T16:31:52.907Z",
+            "modified": "2024-02-28T16:34:54.141Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWRmNGFhMWNlMzg0YzI4ZGQxZWNiYTgiLCJpYXQiOjE3MDkxMzgwODIsImV4cCI6MTcwOTE0MTY4Mn0.JD2BGkL8WIzAtLGigKGJEiQM3URwvgdMHoY4kVrtVNg"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\": \"La oruga\",\n  \"category\": \"Cuento\",\n  \"maintext\": \"La oruga es chiquita y come hojas\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "fce3a16e-4159-4c44-b50f-2c03fefbcd18",
+            "colId": "74d19e22-d51e-4539-ba35-a5969456083a",
+            "containerId": "",
+            "name": "delete deleteMyPost",
+            "url": "http://localhost:3000/tabby/v1/publication/deleteMyPost/65df63a7de7f1f3e91b6a5e4",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2024-02-28T17:08:27.645Z",
+            "modified": "2024-02-28T17:09:51.691Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWRmNWM5ZDVmZDhhMDZmYzFhODVlOWQiLCJpYXQiOjE3MDkxNDAxODAsImV4cCI6MTcwOTE0Mzc4MH0.ZkkSG-7XA2XcH5o-2Enz6pxOiA1_DaL5sl5a31mhBzs"
+                }
+            ],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
