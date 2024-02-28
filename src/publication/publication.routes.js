@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { check } from "express-validator";
-import { publicationCommentsPut, publicationPost, seePosts, updateMyPost } from "./publication.controller.js";
+import { deleteMyPost, publicationCommentsPut, publicationPost, seePosts, updateMyPost } from "./publication.controller.js";
 import { validateFields } from "../middlewares/validate-fields.js";
 import { validateJWT } from "../middlewares/validate-jwt.js";
 
@@ -33,5 +33,13 @@ router.put(
         check("id", "It is not a valid id").isMongoId(),
         validateFields,
     ], updateMyPost);
+
+router.delete(
+    "/deleteMyPost/:id",
+    [
+        validateJWT,
+        check("id", "It is not a valid id").isMongoId(),
+        validateFields,
+    ], deleteMyPost);
 
 export default router;

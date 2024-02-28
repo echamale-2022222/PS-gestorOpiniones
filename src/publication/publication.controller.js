@@ -50,6 +50,8 @@ export const publicationCommentsPut = async (req = request, res = response) => {
     });    
 }
 
+// hacer el put para actualizar los comentarios a partir de el metodo de arriba y la validacion a traves del token 
+
 export const updateMyPost = async (req = request, res = response) => {
     const { id } = req.params;
     const username = req.user.username
@@ -76,5 +78,32 @@ export const updateMyPost = async (req = request, res = response) => {
         return res.status(500).json({
             msg: "Internal Server Error"
         });
+    }
+}
+
+export const deleteMyPost = async (req = request, res = response) => {
+    const { id } = req.params;
+    const username = req.user.username;
+
+    try {
+        const publication = await Publication.findById(id);
+
+        if (publication.username === username) {
+            const publication = await Publication.findByIdAndUpdate(id, {publicationStatus: false});
+            const publicationDel = await Publication.findOne({_id: id});
+
+            res.status(200).json({
+                msg: "Post successfully deleted",
+                publicationDel
+            })
+        } else {
+            res.status(403).json({
+                msg: "You did not create this post, you do not have permission to delete it."
+            })
+        }
+    } catch (e) {
+        return res.status(500).json({
+            msg: "Internal Server Error"
+        })
     }
 }
