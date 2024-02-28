@@ -23,7 +23,11 @@ const PublicationSchema = mongoose.Schema({
         content: {
             type: String
         }
-    }]
+    }],
+    publicationStatus:{
+        type: Boolean,
+        default: true
+    }
 });
 
 export default mongoose.model('Publication', PublicationSchema);
