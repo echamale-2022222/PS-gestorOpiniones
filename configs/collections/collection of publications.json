@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "collection of publications",
-    "dateExported": "2024-02-29T03:58:03.770Z",
+    "dateExported": "2024-02-29T04:51:35.810Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -14,11 +14,11 @@
             "method": "POST",
             "sortNum": 10000,
             "created": "2024-02-28T15:01:55.628Z",
-            "modified": "2024-02-29T02:59:41.279Z",
+            "modified": "2024-02-29T04:38:55.144Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWRmNWM5ZDVmZDhhMDZmYzFhODVlOWQiLCJpYXQiOjE3MDkxNzU1NDYsImV4cCI6MTcwOTE3OTE0Nn0.Cqnn0Kjuv0_L7oiE9THLGrEMPFL_0n4k_4gxtse4wfo"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUwMDg1NGQ4OTgxMDFkNzQzNGY4ZjMiLCJpYXQiOjE3MDkxODE1MTgsImV4cCI6MTcwOTE4NTExOH0._HDr4dTqgLUhQYtfgEfP5iPujwwctkUh-1kmnXqiZnw"
                 }
             ],
             "params": [],
@@ -48,15 +48,15 @@
             "colId": "74d19e22-d51e-4539-ba35-a5969456083a",
             "containerId": "",
             "name": "put addComments",
-            "url": "http://localhost:3000/tabby/v1/publication/65dff16f7cf2e4339c37420a",
+            "url": "http://localhost:3000/tabby/v1/publication/65e00a5f8d686f74f1938e7e",
             "method": "PUT",
             "sortNum": 20000,
             "created": "2024-02-28T16:14:48.953Z",
-            "modified": "2024-02-29T03:30:42.942Z",
+            "modified": "2024-02-29T04:39:26.034Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWRmNWM5ZDVmZDhhMDZmYzFhODVlOWQiLCJpYXQiOjE3MDkxNzcxNjgsImV4cCI6MTcwOTE4MDc2OH0.fWGqT_Eom3-2bP3XSK6cQBE_gOmGBeZHgNSjrQm1dHA"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUwMDg1NGQ4OTgxMDFkNzQzNGY4ZjMiLCJpYXQiOjE3MDkxODE1MTgsImV4cCI6MTcwOTE4NTExOH0._HDr4dTqgLUhQYtfgEfP5iPujwwctkUh-1kmnXqiZnw"
                 }
             ],
             "params": [],
@@ -72,15 +72,15 @@
             "colId": "74d19e22-d51e-4539-ba35-a5969456083a",
             "containerId": "",
             "name": "put updateMyPost",
-            "url": "http://localhost:3000/tabby/v1/publication/updateMyPost/65df584da2cb987ef6a95969",
+            "url": "http://localhost:3000/tabby/v1/publication/updateMyPost/65e00a5f8d686f74f1938e7e",
             "method": "PUT",
             "sortNum": 30000,
             "created": "2024-02-28T16:31:52.907Z",
-            "modified": "2024-02-28T16:34:54.141Z",
+            "modified": "2024-02-29T04:40:43.809Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWRmNGFhMWNlMzg0YzI4ZGQxZWNiYTgiLCJpYXQiOjE3MDkxMzgwODIsImV4cCI6MTcwOTE0MTY4Mn0.JD2BGkL8WIzAtLGigKGJEiQM3URwvgdMHoY4kVrtVNg"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUwMDg1NGQ4OTgxMDFkNzQzNGY4ZjMiLCJpYXQiOjE3MDkxODE1MTgsImV4cCI6MTcwOTE4NTExOH0._HDr4dTqgLUhQYtfgEfP5iPujwwctkUh-1kmnXqiZnw"
                 }
             ],
             "params": [],
@@ -96,15 +96,15 @@
             "colId": "74d19e22-d51e-4539-ba35-a5969456083a",
             "containerId": "",
             "name": "delete deleteMyPost",
-            "url": "http://localhost:3000/tabby/v1/publication/deleteMyPost/65df63a7de7f1f3e91b6a5e4",
+            "url": "http://localhost:3000/tabby/v1/publication/deleteMyPost/65e00a5f8d686f74f1938e7e",
             "method": "DELETE",
             "sortNum": 40000,
             "created": "2024-02-28T17:08:27.645Z",
-            "modified": "2024-02-28T17:09:51.691Z",
+            "modified": "2024-02-29T04:41:13.519Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWRmNWM5ZDVmZDhhMDZmYzFhODVlOWQiLCJpYXQiOjE3MDkxNDAxODAsImV4cCI6MTcwOTE0Mzc4MH0.ZkkSG-7XA2XcH5o-2Enz6pxOiA1_DaL5sl5a31mhBzs"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUwMDg1NGQ4OTgxMDFkNzQzNGY4ZjMiLCJpYXQiOjE3MDkxODE1MTgsImV4cCI6MTcwOTE4NTExOH0._HDr4dTqgLUhQYtfgEfP5iPujwwctkUh-1kmnXqiZnw"
                 }
             ],
             "params": [],
@@ -115,21 +115,21 @@
             "colId": "74d19e22-d51e-4539-ba35-a5969456083a",
             "containerId": "",
             "name": "put updateMyComment",
-            "url": "http://localhost:3000/tabby/v1/publication/65dff16f7cf2e4339c37420a/65dffa7731789450ca1a8849",
+            "url": "http://localhost:3000/tabby/v1/publication/65e00a5f8d686f74f1938e7e/65e00a7e8d686f74f1938e83",
             "method": "PUT",
             "sortNum": 50000,
             "created": "2024-02-29T02:58:37.872Z",
-            "modified": "2024-02-29T03:43:56.861Z",
+            "modified": "2024-02-29T04:48:31.504Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWRmNWM5ZDVmZDhhMDZmYzFhODVlOWQiLCJpYXQiOjE3MDkxNzcxNjgsImV4cCI6MTcwOTE4MDc2OH0.fWGqT_Eom3-2bP3XSK6cQBE_gOmGBeZHgNSjrQm1dHA"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUwMDg1NGQ4OTgxMDFkNzQzNGY4ZjMiLCJpYXQiOjE3MDkxODE1MTgsImV4cCI6MTcwOTE4NTExOH0._HDr4dTqgLUhQYtfgEfP5iPujwwctkUh-1kmnXqiZnw"
                 }
             ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"content\": \"prueba de editar nuevamente y de nuevo\"\n}",
+                "raw": "{\n  \"content\": \"prueba de editar nuevamente y de nuevo y de nuevo\"\n}",
                 "form": []
             },
             "tests": []
@@ -139,15 +139,15 @@
             "colId": "74d19e22-d51e-4539-ba35-a5969456083a",
             "containerId": "",
             "name": "put deleteMyComment ",
-            "url": "http://localhost:3000/tabby/v1/publication/65dff16f7cf2e4339c37420a/65dffec623f276aa27843945",
+            "url": "http://localhost:3000/tabby/v1/publication/65e00a5f8d686f74f1938e7e/65e00a7e8d686f74f1938e83",
             "method": "DELETE",
             "sortNum": 60000,
             "created": "2024-02-29T03:48:40.403Z",
-            "modified": "2024-02-29T03:50:27.447Z",
+            "modified": "2024-02-29T04:49:24.502Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWRmNWM5ZDVmZDhhMDZmYzFhODVlOWQiLCJpYXQiOjE3MDkxNzg2MTcsImV4cCI6MTcwOTE4MjIxN30.smq7tEYx8EdTCp4zFsFJEhqQ9ths5goBJ33bTo6dHuY"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUwMDg1NGQ4OTgxMDFkNzQzNGY4ZjMiLCJpYXQiOjE3MDkxODE1MTgsImV4cCI6MTcwOTE4NTExOH0._HDr4dTqgLUhQYtfgEfP5iPujwwctkUh-1kmnXqiZnw"
                 }
             ],
             "params": [],

@@ -50,7 +50,6 @@ export const publicationCommentsPut = async (req = request, res = response) => {
     });
 }
 
-// hacer el put para actualizar los comentarios a partir de el metodo de arriba y la validacion a traves del token 
 
 export const updateMyPost = async (req = request, res = response) => {
     const { id } = req.params;
@@ -89,6 +88,7 @@ export const deleteMyPost = async (req = request, res = response) => {
         const publication = await Publication.findById(id);
 
         if (publication.username === username) {
+
             const publication = await Publication.findByIdAndUpdate(id, { publicationStatus: false });
             const publicationDel = await Publication.findOne({ _id: id });
 
@@ -117,6 +117,10 @@ export const updateMyComment = async (req = request, res = response) => {
 
         if (!publication) {
             return res.status(404).json({ msg: "Post not found" });
+        }
+
+        if (!publication.publicationStatus) {
+            return res.status(403).json({ msg: "You can't update comments on an inactive post" });
         }
 
         const comentario = publication.comments.find(comment => comment._id.toString() === commentID);

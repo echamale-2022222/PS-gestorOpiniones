@@ -1,8 +1,9 @@
 import { Router } from "express";
 import { check } from "express-validator";
-import { userPost } from "./user.controller.js";
+import { updateUser, userPost } from "./user.controller.js";
 import { existingEmail, existingUsername } from "../helpers/db-validators.js";
 import { validateFields } from "../middlewares/validate-fields.js";
+import { validateJWT } from "../middlewares/validate-jwt.js";
 
 const router = Router();
 
@@ -17,4 +18,11 @@ router.post(
         validateFields,
     ], userPost);
 
+router.put(
+    "/:id",
+    [
+        validateJWT,
+        check("id", "This is not a valid id").isMongoId(),
+        validateFields,
+    ], updateUser);
 export default router;

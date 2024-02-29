@@ -1,0 +1,33 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "collection user",
+    "dateExported": "2024-02-29T04:51:49.382Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "9d9fd56e-9ec1-4df3-a195-a668d12788a7",
+            "colId": "ada1a9dd-d625-42ae-91b4-ec9655c28bd3",
+            "containerId": "",
+            "name": "put updateUser",
+            "url": "http://localhost:3000/tabby/v1/user/65e00854d898101d7434f8f3",
+            "method": "PUT",
+            "sortNum": 10000,
+            "created": "2024-02-29T04:15:55.070Z",
+            "modified": "2024-02-29T04:38:15.381Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUwMDg1NGQ4OTgxMDFkNzQzNGY4ZjMiLCJpYXQiOjE3MDkxODEwMzUsImV4cCI6MTcwOTE4NDYzNX0.2Cr4Cd9BeLYErpTA_Xj6Qpyt5QQv4IJYTrYjqvmQVRg"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"mail\": \"echamale1234@gmail.com\",\n  \"password\": \"123456\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}

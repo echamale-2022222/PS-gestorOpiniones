@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "registration and login",
-    "dateExported": "2024-02-29T03:57:34.298Z",
+    "dateExported": "2024-02-29T04:51:23.739Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -33,12 +33,12 @@
             "method": "POST",
             "sortNum": 30000,
             "created": "2024-02-26T17:02:46.734Z",
-            "modified": "2024-02-26T17:02:46.734Z",
+            "modified": "2024-02-29T04:50:40.942Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"mail\": \"echamale@gmail.com\",\n  \"password\": \"asdfgh\"\n}",
+                "raw": "{\n  \"mail\": \"echamale@gmail.com\",\n  \"password\": \"aasdfgh\"\n}",
                 "form": []
             },
             "tests": []
@@ -52,7 +52,7 @@
             "method": "POST",
             "sortNum": 40000,
             "created": "2024-02-26T17:02:46.735Z",
-            "modified": "2024-02-29T03:50:17.631Z",
+            "modified": "2024-02-29T04:50:53.245Z",
             "headers": [],
             "params": [],
             "body": {
