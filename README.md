@@ -1,2 +1,7 @@
 # PS-gestorOpiniones
-Este sistema tiene como objetivo crear un sistema de gestión de opiniones similar a las publicaciones de Facebook, con funcionalidades específicas centradas en la interacción y expresión de opiniones por parte de los usuarios.
+Es sistema trabaja a partir de la validacion por token, a la hora de actualizar el usuario un dato que yo decidí no actualizar fue el username, debido a que todas mis validaciones con token usaban el username y para no complicarme, mejor no decidi actualizarlo
+
+Ahora en el put updateMyComment la sintaxis para el funcionamiento correcto es: 
+http://localhost:3000/tabby/v1/publication/publicationID/commentID
+
+al igual que para el delete deleteMyComment
