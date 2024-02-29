@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "collection of publications",
-    "dateExported": "2024-02-29T04:51:35.810Z",
+    "dateExported": "2024-02-29T05:06:49.942Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -138,7 +138,7 @@
             "_id": "533aa429-6eef-4fdb-aae3-903bd9e83ab6",
             "colId": "74d19e22-d51e-4539-ba35-a5969456083a",
             "containerId": "",
-            "name": "put deleteMyComment ",
+            "name": "delete deleteMyComment ",
             "url": "http://localhost:3000/tabby/v1/publication/65e00a5f8d686f74f1938e7e/65e00a7e8d686f74f1938e83",
             "method": "DELETE",
             "sortNum": 60000,
