@@ -5,9 +5,9 @@ export const publicationPost = async (req = request, res = response) => {
     const username = req.user.username;
     const { title, category, maintext } = req.body;
 
-    console.log('user:', username )
+    console.log('user:', username)
 
-    const publication = new Publication({username, title, category, maintext});
+    const publication = new Publication({ username, title, category, maintext });
 
     await publication.save();
 
@@ -19,7 +19,7 @@ export const publicationPost = async (req = request, res = response) => {
 
 export const seePosts = async (req = request, res = response) => {
     const query = { publicationStatus: true };
-    
+
     const [quantityPublication, publications] = await Promise.all([
         Publication.countDocuments(query),
         Publication.find(query)
@@ -38,16 +38,16 @@ export const publicationCommentsPut = async (req = request, res = response) => {
 
     const usernameC = req.user.username;
 
-    const newComment = {usernameC: usernameC, ...rest};
+    const newComment = { usernameC: usernameC, ...rest };
 
-    await Publication.findByIdAndUpdate(id, {$push: {comments: newComment} });
+    await Publication.findByIdAndUpdate(id, { $push: { comments: newComment } });
 
-    const publication = await Publication.findOne({_id: id});
+    const publication = await Publication.findOne({ _id: id });
 
     res.status(200).json({
         msg: "added comment",
         publication
-    });    
+    });
 }
 
 // hacer el put para actualizar los comentarios a partir de el metodo de arriba y la validacion a traves del token 
@@ -60,10 +60,10 @@ export const updateMyPost = async (req = request, res = response) => {
         const publication = await Publication.findById(id);
 
         if (publication.username === username) {
-            const { _id, username, publicationStatus, ...rest} = req.body;
+            const { _id, username, publicationStatus, ...rest } = req.body;
             await Publication.findByIdAndUpdate(id, rest);
 
-            const publicationN = await Publication.findOne({_id: id});
+            const publicationN = await Publication.findOne({ _id: id });
 
             res.status(200).json({
                 msg: "Updated post",
@@ -89,8 +89,8 @@ export const deleteMyPost = async (req = request, res = response) => {
         const publication = await Publication.findById(id);
 
         if (publication.username === username) {
-            const publication = await Publication.findByIdAndUpdate(id, {publicationStatus: false});
-            const publicationDel = await Publication.findOne({_id: id});
+            const publication = await Publication.findByIdAndUpdate(id, { publicationStatus: false });
+            const publicationDel = await Publication.findOne({ _id: id });
 
             res.status(200).json({
                 msg: "Post successfully deleted",
@@ -107,3 +107,46 @@ export const deleteMyPost = async (req = request, res = response) => {
         })
     }
 }
+
+export const updateMyComment = async (req = request, res = response) => {
+    const { publicationID, commentID } = req.params;
+    const usernamec = req.user.username;
+
+    try {
+        const publication = await Publication.findById(publicationID);
+
+        if (!publication) {
+            return res.status(404).json({ msg: "Publicación no encontrada" });
+        }
+
+        const comentario = publication.comments.find(comment => comment._id.toString() === commentID);
+
+        if (!comentario) {
+            return res.status(404).json({ msg: "Comentario no encontrado" });
+        }
+
+        if (comentario.usernameC === usernamec) {
+            const { _id, ...rest } = req.body;
+
+            await Publication.findOneAndUpdate(
+                { _id: publicationID, "comments._id": commentID },
+                { $set: { "comments.$.content": rest.content, "comments.$.otherField": rest.otherField, "comments.$.usernameC": usernamec } }
+            );
+
+            const publicationN = await Publication.findOne({ _id: publicationID });
+
+            res.status(200).json({
+                msg: "Comentario actualizado correctamente",
+                publicationN
+            });
+        } else {
+            res.status(403).json({
+                msg: "No eres el autor de este comentario"
+            });
+        }
+    } catch (error) {
+        console.error(error);
+        return res.status(500).json({ msg: "Error interno del servidor" });
+    }
+}
+

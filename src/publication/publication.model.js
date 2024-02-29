@@ -18,7 +18,7 @@ const PublicationSchema = mongoose.Schema({
     },
     comments:[{
         usernameC: {
-            type: String,
+            type: String
         },
         content: {
             type: String
