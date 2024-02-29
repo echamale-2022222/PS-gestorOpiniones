@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { check } from "express-validator";
-import { deleteMyPost, publicationCommentsPut, publicationPost, seePosts, updateMyComment, updateMyPost } from "./publication.controller.js";
+import { deleteMyComment, deleteMyPost, publicationCommentsPut, publicationPost, seePosts, updateMyComment, updateMyPost } from "./publication.controller.js";
 import { validateFields } from "../middlewares/validate-fields.js";
 import { validateJWT } from "../middlewares/validate-jwt.js";
 
@@ -43,14 +43,22 @@ router.delete(
     ], deleteMyPost);
 
 router.put(
-    "/:idPublicacion/:idComentario",
+    "/:publicationID/:commentID",
     [
         validateJWT,
-        check("idPublicacion", "It is not a valid id").isMongoId(),
-        check("idComentario", "It is not a valid id").isMongoId(),
+        check("publicationID", "It is not a valid id").isMongoId(),
+        check("commentID", "It is not a valid id").isMongoId(),
         validateFields,
     ], updateMyComment);
 
-    //"/:idPublicacion/:idComentario",
+router.delete(
+    "/:publicationID/:commentID",
+    [
+    validateJWT,
+    check("publicationID", "It is not a valid id").isMongoId(),
+    check("commentID", "It is not a valid id").isMongoId(),
+    validateFields,], deleteMyComment)
+
+//"/:idPublicacion/:idComentario",
 
 export default router;
