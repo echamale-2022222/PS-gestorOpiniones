@@ -5,3 +5,5 @@ Ahora en el put updateMyComment la sintaxis para el funcionamiento correcto es:
 http://localhost:3000/tabby/v1/publication/publicationID/commentID
 
 al igual que para el delete deleteMyComment
+
+luego todos los demas funcionan solo con el token y el id 
